@@ -4,15 +4,16 @@
 ## @seealso{}
 ## @end deftypefn
 
-## Author: Zorawar Moolenaar <zoraw@blade>
+## Author: Zorawar Moolenaar <zorawar87@gmail.com>
 ## Created: 2017-11-27
 
-function [vMax, lMax] = PowerMethod (A, x_0, k)
-  vMax = x_0;
+function [vec, lam] = PowerMethod (A, x_0, k)
+  x=x_0;
   for i=1:k
-    lMax = vMax'*A*vMax / (vMax'*vMax)
-    # calculate vector product 
-    vMax = A*vMax;
-    vMax = vMax / norm(vMax);
+    y=A*x;
+    n=norm(A*x);
+    x=y/n;
   end
+  vec=x;
+  lam=n;
 end
