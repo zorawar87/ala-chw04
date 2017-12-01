@@ -12,11 +12,11 @@ function [PI] = Transition (A, alpha)
   P = zeros(n);
   for i=1:n
     thisCol = A(:,i);
-    len = norm(thisCol);
-    if len == 0
+    total = sum(thisCol);
+    if total == 0
       P(:,i) = ones(n,1)/n;
     else
-      P(:,i) = thisCol/len;
+      P(:,i) = thisCol/total;
     end
   end
   PI = (1-alpha)*P + (alpha/n) *ones(n);

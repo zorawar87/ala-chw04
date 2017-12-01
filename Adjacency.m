@@ -10,6 +10,7 @@
 function [A] = Adjacency (raw)
   [m,n] = size(raw);
   A = zeros(1000);
+  #A= zeros(4);
   for index=1:m
     A(raw(index,2),raw(index,1)) = 1;
   end
