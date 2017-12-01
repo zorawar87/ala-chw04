@@ -1,12 +1,3 @@
-## -*- texinfo -*- 
-## @deftypefn {} {@var{retval} =} Adjacency (@var{input1}, @var{input2})
-##
-## @seealso{}
-## @end deftype
-
-## Author: Zorawar Moolenaar <zoraw@blade>
-## Created: 2017-11-27
-
 function [PI] = Transition (A, alpha)
   [m,n] = size(A);
   P = zeros(n);

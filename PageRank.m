@@ -1,8 +1,8 @@
 clc;
 clear;
 
-N=1000;
 Data = importdata('NotreDame.txt');
+N = max(Data(:));
 A = Adjacency(Data);
 
 alphas = [0.1 0.05 0.2];
